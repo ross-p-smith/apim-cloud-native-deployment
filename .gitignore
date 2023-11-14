@@ -1,0 +1,7 @@
+.env
+infrastructure/terraform.tfstate.backup
+infrastructure/terraform.tfstate
+infrastructure/terraform_output.json
+infrastructure/terraform.env
+infrastructure/.terraform
+infrastructure/.terraform.lock.hcl
