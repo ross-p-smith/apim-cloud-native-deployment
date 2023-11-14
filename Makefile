@@ -20,7 +20,7 @@ infra: ## 🚀 Deploy the API Ops Infrastructure
 	@echo -e "\e[34m$@\e[0m" || true
 	@./scripts/deploy.sh
 
-aso: ## 🚀 Setup Azure Service Operator
+aso: ## ⚙️ Setup Azure Service Operator
 	@echo -e "\e[34m$@\e[0m" || true
 	@./scripts/aso.sh
 
