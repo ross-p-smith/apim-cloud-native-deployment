@@ -31,7 +31,7 @@ terraform apply --auto-approve -lock=false
 
 echo -e "\e[33mAdding environment variables to .env\e[0m"
 terraform output -json > terraform_output.json
-../scripts/json-to-env.sh < terraform_output.json > terraform.env
+../scripts/json_to_env.sh < terraform_output.json > terraform.env
   # Remove everything after a pattern and then merge our .env file with the terraform output
   sed -i '0,/^# =================================================/I!d' ../.env
   sed -i '/^# =================================================/ r terraform.env' ../.env

@@ -19,3 +19,12 @@ output "apim_client_secret" {
   sensitive   = true
 }
 
+output "apim_name" {
+  description = "Production APIM Name."
+  value       = azurerm_api_management.apim.name
+}
+
+output "resource_group_name" {
+  description = "Development Resource Group Name."
+  value       = azurerm_resource_group.rg.name
+}

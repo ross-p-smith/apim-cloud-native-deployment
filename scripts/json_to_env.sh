@@ -20,6 +20,14 @@ jq -r '
         {
             "path": "azure_tenant_id",
             "env_var": "AZURE_TENANT_ID"
+        },
+        {
+            "path": "apim_name",
+            "env_var": "APIM_NAME"
+        },
+        {
+            "path": "resource_group_name",
+            "env_var": "RESOURCE_GROUP_NAME"
         }
     ]
         as $env_vars_to_extract
