@@ -1,6 +1,6 @@
 # Deploying API Management artefacts in a cloud native manner
 
-This repository create an Azure Kubernetes Service and an API Management to demonstrate how you would use the Kubernetes API to create APIs in API Management
+This repository creates an Azure Kubernetes Service and an API Management to demonstrate how you would use the Kubernetes API to create APIs in API Management
 
 ## Repository Structure
 
@@ -42,7 +42,7 @@ Run the following from a terminal: -
 
 `make aso`
 
-### Use kubectl to apply configuration to AKS which configures APIM!
+### Use kubectl to apply configuration to AKS which then configures APIM!
 
 Run the following from a terminal: -
 

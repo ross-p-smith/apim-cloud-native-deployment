@@ -20,11 +20,11 @@ output "apim_client_secret" {
 }
 
 output "apim_name" {
-  description = "Production APIM Name."
+  description = "APIM Name."
   value       = azurerm_api_management.apim.name
 }
 
 output "resource_group_name" {
-  description = "Development Resource Group Name."
+  description = "Resource Group Name."
   value       = azurerm_resource_group.rg.name
 }
