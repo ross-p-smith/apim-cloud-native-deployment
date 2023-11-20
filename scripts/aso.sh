@@ -11,6 +11,9 @@ kubectl label namespace cert-manager cert-manager.io/disable-validation=true
 # Apply Cert Manager
 kubectl apply -f https://github.com/jetstack/cert-manager/releases/download/v1.12.1/cert-manager.yaml
 
+# Check that every pod in the cert-manager namespace has a STATUS of Running or Completed:
+kubectl wait --for=condition=ready pod --all -n cert-manager --timeout=300s
+
 # Add Azure Service Operator
 helm repo add aso2 https://raw.githubusercontent.com/Azure/azure-service-operator/main/v2/charts
 

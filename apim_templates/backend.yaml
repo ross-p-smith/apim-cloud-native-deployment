@@ -1,11 +1,14 @@
 apiVersion: apimanagement.azure.com/v1api20220801
 kind: Backend
 metadata:
-  name: sampleapimbackend
+  name: petstore
   namespace: default
 spec:
-  description: Sample backend
+  description: Petstore
   protocol: http
-  url: http://www.contoso.com
+  url: https://petstore.swagger.io/v2
+  tls:
+    validateCertificateChain: true
+    validateCertificateName: true
   owner:
     armId: /subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/${RESOURCE_GROUP_NAME}/providers/Microsoft.ApiManagement/service/${APIM_NAME}
