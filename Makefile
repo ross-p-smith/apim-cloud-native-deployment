@@ -28,7 +28,10 @@ create_apim_artifacts: ## 🚀 Create APIM Artifacts
 	@echo -e "\e[34m$@\e[0m" || true
 	@./scripts/create_apim_artifacts.sh
 
-deploy_apim_artifacts: create_apim_artifacts ## 🚀 Deploy APIM Artifacts
+add_apim_artifacts: create_apim_artifacts ## 🚀 Deploy APIM Artifacts
 	@echo -e "\e[34m$@\e[0m" || true
 	@kubectl apply -f ./apim_artifacts/
 
+remove_apim_artifacts: create_apim_artifacts ## 🚀 Deploy APIM Artifacts
+	@echo -e "\e[34m$@\e[0m" || true
+	@kubectl delete -f ./apim_artifacts/

@@ -1,0 +1,11 @@
+apiVersion: apimanagement.azure.com/v1api20220801
+kind: ApiVersionSet
+metadata:
+  name: petstore
+  namespace: default
+spec:
+  displayName: Petstore
+  description: A sample API that uses a petstore backend
+  versioningScheme: Segment
+  owner:
+    armId: /subscriptions/${AZURE_SUBSCRIPTION_ID}/resourceGroups/${RESOURCE_GROUP_NAME}/providers/Microsoft.ApiManagement/service/${APIM_NAME}
