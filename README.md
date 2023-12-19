@@ -23,9 +23,11 @@ A makefile provides a frontend to interacting with the project. This makefile is
 
 ```text
 help                    💬 This help message :)
-infra                   🚀 Deploy the API Ops Infrastructure
-aso                     ⚙️ Setup Azure Service Operator
-deploy_apim_artifacts   🚀 Deploy APIM Artifacts
+infra                   🏗️  Create the cloud Infrastructure
+aso                     ⚙️  Setup Azure Service Operator
+create_apim_artifacts   ⚙️  Create APIM Artifacts
+add_apim_artifacts      ⬆️ Apply APIM Artifacts
+remove_apim_artifacts   ⬇️ Remove APIM Artifacts
 ```
 
 ### Deploy the Infrastructure
@@ -34,7 +36,7 @@ Make a copy of the `.env.example` and call it `.env`; then define an Azure regio
 
 `make infra`
 
-This will install APIM - go make yourself some lunch!
+This will create an AKS and an APIM service - go make yourself some lunch!
 
 ### Install Azure Service Operator in your cluster
 
@@ -46,4 +48,10 @@ Run the following from a terminal: -
 
 Run the following from a terminal: -
 
-`make deploy_apim_artifacts`
+`make add_apim_artifacts`
+
+### Use kubectl to remove configuration from AKS which then removes APIM configuration!
+
+Run the following from a terminal: -
+
+`make remove_apim_artifacts`
