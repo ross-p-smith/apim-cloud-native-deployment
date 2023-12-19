@@ -12,8 +12,11 @@ fi
 if ! az account show 1>/dev/null; then
     echo "You must log into Azure first!"
     az login
-    az account set -s $TF_VAR_subscription_id
 fi
+
+# Always log the user into the defined subscription
+az account set -s $TF_VAR_subscription_id
+
 
 # Check the logged in user has AAD permission "Application Administrator"
 if ! az ad signed-in-user show --query "appRoleAssignments[?principalRole=='ApplicationAdministrator']" -o tsv; then

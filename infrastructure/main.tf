@@ -41,6 +41,10 @@ resource "random_pet" "azurerm_apim_name" {
   prefix = "apim"
 }
 
+resource "random_pet" "azurerm_keyvault_name" {
+  prefix = "kv"
+}
+
 ################ AKS ################
 resource "azurerm_kubernetes_cluster" "example" {
   name                = random_pet.azurerm_kubernetes_cluster_name.id
@@ -114,7 +118,7 @@ resource "azurerm_monitor_diagnostic_setting" "apim_diagnostic_setting" {
 }
 
 resource "azurerm_key_vault" "key_vault" {
-  name                = "kv-${random_pet.azurerm_apim_name.id}"
+  name                = random_pet.azurerm_keyvault_name.id
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
