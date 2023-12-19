@@ -1,4 +1,4 @@
-# Deploying API Management artefacts in a cloud native manner
+# Deploying API Management artifacts in a cloud native manner
 
 This repository creates an Azure Kubernetes Service and an API Management to demonstrate how you would use the Kubernetes API to create APIs in API Management
 
